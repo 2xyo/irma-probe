@@ -209,7 +209,7 @@ class NSRLLevelDict(LevelDictSerialized, LevelDBSingleton):
         # create database
         db = cls(dbfile, **kwargs)
         # open csv files
-        csv_file = open(records, 'r')
+        csv_file = open(records, 'w+')
         csv_entries = DictReader(csv_file)
 
         for index, row in enumerate(csv_entries):
